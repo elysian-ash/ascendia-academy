@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ascendia Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Bebas+Neue&family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --dark: #1c1b33;
-      --cream: #fff7ed;
-      --accent: #6fa8dc;
-      --red: #e63946;
-      --font-head: 'Playfair Display', serif;
-      --font-body: 'Poppins', sans-serif;
+      --hot-pink: #ff1493;
+      --hot-blue: #00bfff;
+      --white: #ffffff;
+      --font-head: 'Graduate', cursive;
+      --font-body: 'Orbitron', sans-serif;
     }
 
     * {
@@ -22,84 +22,125 @@
 
     body {
       font-family: var(--font-body);
-      background: var(--cream);
-      color: var(--dark);
+      background: linear-gradient(180deg, var(--hot-pink), var(--hot-blue));
+      color: var(--white);
       line-height: 1.6;
       padding: 20px;
     }
 
     header {
-      background: var(--dark);
-      color: var(--cream);
       text-align: center;
-      padding: 40px 20px;
-      border-radius: 12px;
+      padding: 60px 20px;
+      border-bottom: 4px dashed var(--white);
     }
 
     header h1 {
       font-family: var(--font-head);
-      font-size: 3rem;
+      font-size: 4rem;
       margin-bottom: 10px;
+      color: var(--white);
     }
 
     header p {
-      font-size: 1.2rem;
-      opacity: 0.9;
+      font-size: 1.6rem;
+      color: var(--white);
     }
 
     section {
-      max-width: 800px;
-      margin: 40px auto;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 20px;
     }
 
     h2 {
       font-family: var(--font-head);
-      font-size: 2rem;
-      margin-bottom: 10px;
-      color: var(--dark);
-    }
-
-    .highlight {
-      color: var(--red);
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: var(--white);
+      text-align: center;
     }
 
     .btn {
-      background: var(--accent);
-      color: white;
-      padding: 12px 24px;
+      background: var(--white);
+      color: var(--hot-pink);
+      padding: 16px 32px;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       font-size: 1rem;
       cursor: pointer;
-      transition: background 0.3s ease;
+      font-weight: bold;
+      transition: transform 0.2s;
+      display: block;
+      margin: 20px auto;
     }
 
     .btn:hover {
-      background: #4682b4;
+      transform: scale(1.05);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
     }
 
     .course-box {
-      background: white;
-      border-left: 5px solid var(--accent);
-      margin: 20px 0;
-      padding: 16px;
-      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 30px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 6px 25px rgba(255, 20, 147, 0.4);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .course-box:hover {
+      transform: scale(1.05) rotate(-1deg);
+      animation: shake 0.5s ease-in-out;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-3px); }
+      50% { transform: translateX(3px); }
+      75% { transform: translateX(-3px); }
+    }
+
+    .course-box h3 {
+      color: var(--white);
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .course-box p {
+      color: var(--white);
+      font-size: 1rem;
     }
 
     footer {
       text-align: center;
       font-size: 0.9rem;
       margin-top: 60px;
-      color: #777;
+      color: var(--white);
+      border-top: 4px dashed var(--white);
+      padding-top: 20px;
+    }
+
+    .divider {
+      height: 6px;
+      background: linear-gradient(90deg, var(--hot-pink), var(--hot-blue));
+      margin: 60px 0;
+      border-radius: 10px;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
       }
 
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -107,45 +148,66 @@
 <body>
   <header>
     <h1>Ascendia Academy</h1>
-    <p>English. Confidence. <span class="highlight">Clarity</span>.</p>
+    <p>Fluent. Fierce. Fabulous.</p>
   </header>
 
   <section>
-    <h2>🚀 What We Offer</h2>
-    <div class="course-box">
-      <h3>O Level / IGCSE English Mastery</h3>
-      <p>Crash course to boost your exam grades. Past paper drills, smart writing strategies, and examiner hacks.</p>
-    </div>
-    <div class="course-box">
-      <h3>Speak Like You Mean It</h3>
-      <p>Spoken English booster: tone, fluency, and confidence. Perfect for interviews, MUNs, and social life.</p>
-    </div>
-    <div class="course-box">
-      <h3>Essay Writing & Proofreading Help</h3>
-      <p>Personalised coaching on how to write and structure essays for school, uni, and life.</p>
+    <h2>💎 Signature Services</h2>
+    <div class="grid">
+      <div class="course-box">
+        <h3>O Level / IGCSE English Elite Prep</h3>
+        <p>Past paper drills, examiner hacks, smart techniques for A* success.</p>
+      </div>
+      <div class="course-box">
+        <h3>Confident Spoken English</h3>
+        <p>Debates, accent work, daily convo mastery & confidence boosts.</p>
+      </div>
+      <div class="course-box">
+        <h3>Essay Writing Genius Program</h3>
+        <p>Master argument-building, structure, intros & killer conclusions.</p>
+      </div>
+      <div class="course-box">
+        <h3>Proofreading & Editing Help</h3>
+        <p>Assignments, essays, personal statements reviewed & polished.</p>
+      </div>
+      <div class="course-box">
+        <h3>Ascendia Bootcamp (All-In-One)</h3>
+        <p>1-month crash course in grammar, fluency, writing & critical reading.</p>
+      </div>
+      <div class="course-box">
+        <h3>Academic Writing for School Projects</h3>
+        <p>Support for research-based projects, analysis, and formatting.</p>
+      </div>
+      <div class="course-box">
+        <h3>Creative Writing Glow-Up</h3>
+        <p>Write short stories, blogs, and creative pieces that shine.</p>
+      </div>
     </div>
   </section>
 
+  <div class="divider"></div>
+
   <section>
-    <h2>📩 Join the Waitlist</h2>
-    <p>Fill out this form and we'll message you on WhatsApp:</p>
-    <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank">
-      <button class="btn">Join Now</button>
+    <h2>🚀 Join Ascendia</h2>
+    <p>Fill the form and our team will WhatsApp you in 24 hours:</p>
+    <a href="https://forms.gle/YOUR_FORM_LINK" target="_blank">
+      <button class="btn">Apply Now</button>
     </a>
   </section>
 
+  <div class="divider"></div>
+
   <section>
-    <h2>👀 Want to Watch Us Build This Live?</h2>
-    <p>Follow us on Instagram: <strong>@ascendia.academy</strong></p>
+    <h2>📢 Stay in the Loop</h2>
+    <p>Weekly updates & free tips on Instagram: <strong>@ascendia.academy</strong></p>
   </section>
 
   <footer>
-    &copy; 2025 Ascendia Academy. Built with Rs. 6,000 and a dream.
+    &copy; 2025 Ascendia Academy — Powered by dreams, built with fire.
   </footer>
 
   <script>
-    // You can add simple animations or interactions here if needed
-    console.log("Ascendia Academy launched!");
+    console.log("Ascendia Academy — Hot pink + hot blue mode activated!");
   </script>
 </body>
 </html>
