@@ -25,7 +25,6 @@
       background: linear-gradient(to bottom, var(--hot-pink), var(--hot-blue));
       color: var(--white);
       padding: 30px;
-      line-height: 1.7;
     }
 
     .container {
@@ -35,29 +34,44 @@
 
     h1 {
       font-family: var(--font-head);
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       margin-bottom: 10px;
-      color: var(--white);
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      margin-top: 30px;
-      margin-bottom: 10px;
-      color: var(--white);
     }
 
     p {
       font-size: 1.1rem;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     ul {
-      margin: 10px 0 20px 20px;
+      margin: 15px 0 25px 20px;
     }
 
     li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+    }
+
+    th, td {
+      border: 2px solid var(--white);
+      padding: 12px 18px;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    th {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    td .strike {
+      text-decoration: line-through;
+      opacity: 0.6;
+      margin-right: 6px;
     }
 
     .btn {
@@ -77,56 +91,47 @@
     .btn:hover {
       transform: scale(1.05);
     }
-
-    .price-box {
-      margin-top: 20px;
-    }
-
-    .price-option {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-
-    .strike {
-      text-decoration: line-through;
-      color: #ffd1ec;
-      margin-right: 10px;
-    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Essay Writing Pro Max</h1>
-    <p>Upgrade your essays with structure, flow, depth, and polish. This course is designed for students who want to write powerful essays for school, exams, or beyond. Whether it's argumentative writing, opinion pieces, or discursive essays — you'll master it all here.</p>
+    <p>Write essays that impress teachers and examiners. Learn to build strong arguments, structure your thoughts clearly, and elevate your vocabulary — all in one high-impact course by Ayesha.</p>
 
     <h2>What You’ll Learn:</h2>
     <ul>
-      <li>How to write killer introductions and conclusions</li>
-      <li>Structure essays like a pro</li>
-      <li>Use transitions and language techniques effectively</li>
-      <li>Improve vocabulary and sentence fluency</li>
-      <li>Practice with real prompts and feedback</li>
+      <li>Strong essay structure and flow</li>
+      <li>Introduction and conclusion mastery</li>
+      <li>Argument-building techniques</li>
+      <li>Vocabulary, clarity, and cohesion</li>
+      <li>Weekly assignments and feedback</li>
     </ul>
 
-    <h2>Course Roadmap:</h2>
-    <ul>
-      <li>Week 1 – Essay structure basics + types of essays</li>
-      <li>Week 2 – Argument-building and content development</li>
-      <li>Week 3 – Tone, expression, and vocab polish</li>
-      <li>Week 4 – Practice writing + feedback & redraft</li>
-    </ul>
+    
 
     <h2>Pricing:</h2>
-    <div class="price-box">
-      <div class="price-option">1 Month: <strong>PKR 9,000</strong></div>
-      <div class="price-option">2 Months: <span class="strike">PKR 18,000</span> <strong>PKR 16,000</strong></div>
-      <div class="price-option">3 Months: <span class="strike">PKR 30,000</span> <strong>PKR 24,000</strong></div>
-    </div>
+    <table>
+      <tr>
+        <th>Duration</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>1 Month</td>
+        <td><strong>PKR 9,000</strong></td>
+      </tr>
+      <tr>
+        <td>2 Months</td>
+        <td><span class="strike">PKR 18,000</span> <strong>PKR 18,000</strong></td>
+      </tr>
+      <tr>
+        <td>3 Months</td>
+        <td><span class="strike">PKR 30,000</span> <strong>PKR 25,000</strong></td>
+      </tr>
+    </table>
 
     <a href="https://forms.gle/BB6rru1oP9tvaXBi7" class="btn" target="_blank">Register Now</a>
 
-    <h2>Need Help?</h2>
-    <p>WhatsApp: <strong>+92 300 1234567</strong></p>
+    <p style="margin-top: 30px;">WhatsApp us: <strong>+92 300 1234567</strong></p>
   </div>
 </body>
 </html>
