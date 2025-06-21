@@ -179,6 +179,60 @@
       font-size: 0.95rem;
       opacity: 0.8;
     }
+
+.section-title {
+  font-family: var(--font-head);
+  font-size: 2.8rem;
+  color: var(--white);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#resources .about {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: var(--white);
+  text-align: center;
+}
+
+.horizontal-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mini-card {
+  flex: 1 1 280px;
+  max-width: 320px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  padding: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 18px rgba(255, 20, 147, 0.3);
+  text-decoration: none;
+  color: var(--white);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mini-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 22px rgba(255, 20, 147, 0.5);
+}
+
+.mini-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.mini-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
   </style>
 </head>
 <body>
@@ -190,34 +244,7 @@
     </div>
   </header>
 
-  <section id="resources">
-  <h1>Free Resources</h1>
-  <p class="about">Carefully made tools and trackers to help you master English and exams with strategy</p>
-
-  <div class="grid">
-    <!-- Resource Card 1 -->
-    <div class="course-box">
-      <h3>O Level / IGCSE Syllabus Guides</h3>
-      <p>Organised topic-wise documents to guide your preparation</p>
-      <a href="YOUR_GOOGLE_DOC_LINK" class="btn" target="_blank">View Guide</a>
-    </div>
-
-    <!-- Resource Card 2 -->
-    <div class="course-box">
-      <h3>English Mastery Tracker</h3>
-      <p>Google Sheets tool to track grammar, writing, and reading goals</p>
-      <a href="YOUR_GOOGLE_SHEET_LINK" class="btn" target="_blank">Open Tracker</a>
-    </div>
-
-    <!-- Resource Card 3 -->
-    <div class="course-box">
-      <h3>Essay Feedback Checklist</h3>
-      <p>A self or peer-review checklist based on real exam rubrics</p>
-      <a href="YOUR_GOOGLE_DOC_LINK" class="btn" target="_blank">Download</a>
-    </div>
-  </div>
-</section>
-
+  
 
   <section>
     <h2>Signature Services</h2>
@@ -253,6 +280,40 @@
 
   <div class="divider"></div>
 
+  <section id="resources">
+  <h2 class="section-title">Free Resources</h2>
+
+
+  <div class="horizontal-cards">
+    <!-- Resource 1 -->
+    <a href="YOUR_GOOGLE_DOC_LINK" class="mini-card" target="_blank">
+      <div>
+        <h3>O Level / IGCSE Syllabus Guides</h3>
+        <p>Topic-wise outlines and updated checklists to structure your prep</p>
+      </div>
+    </a>
+
+    <!-- Resource 2 -->
+    <a href="YOUR_GOOGLE_SHEET_LINK" class="mini-card" target="_blank">
+      <div>
+        <h3>English Mastery Tracker</h3>
+        <p>A Google Sheet to track your grammar, vocab, and reading progress</p>
+      </div>
+    </a>
+
+    <!-- Resource 3 -->
+    <a href="YOUR_NOTEBOOK_LINK" class="mini-card" target="_blank">
+      <div>
+        <h3>The Notebook</h3>
+        <p>Ascendia's English learning journal and personal notebook to grow with you</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+   <div class="divider"></div>
+
+
   <section>
     <h2>Ready to level up? Join Ascendia!</h2>
     <p style="text-align: center;">Fill the form and we’ll contact you within 24 hours</p>
@@ -264,7 +325,7 @@
     </div>
   </section>
 
-  <div class="divider"></div>
+
 
 
 </body>
