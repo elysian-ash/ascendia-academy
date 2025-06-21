@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ascendia Academy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Bebas+Neue&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Poppins:wght@500&display=swap" rel="stylesheet">
   <style>
     :root {
       --hot-pink: #ff1493;
       --hot-blue: #00bfff;
       --white: #ffffff;
       --font-head: 'Graduate', cursive;
-      --font-body: 'Orbitron', sans-serif;
+      --font-body: 'Poppins', sans-serif;
     }
 
     * {
@@ -43,7 +43,6 @@
 
     header p {
       font-size: 1.6rem;
-      color: var(--white);
     }
 
     section {
@@ -56,7 +55,6 @@
       font-family: var(--font-head);
       font-size: 2.5rem;
       margin-bottom: 30px;
-      color: var(--white);
       text-align: center;
     }
 
@@ -91,12 +89,12 @@
       padding: 30px;
       border: 2px solid rgba(255, 255, 255, 0.3);
       box-shadow: 0 6px 25px rgba(255, 20, 147, 0.4);
-      transition: all 0.3s ease;
       text-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
     .course-box:hover {
-      transform: scale(1.05) rotate(-1deg);
       animation: shake 0.5s ease-in-out;
     }
 
@@ -114,7 +112,6 @@
     }
 
     .course-box p {
-      color: var(--white);
       font-size: 1rem;
     }
 
@@ -122,7 +119,6 @@
       text-align: center;
       font-size: 0.9rem;
       margin-top: 60px;
-      color: var(--white);
       border-top: 4px dashed var(--white);
       padding-top: 20px;
     }
@@ -143,6 +139,11 @@
         font-size: 1.8rem;
       }
     }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   </style>
 </head>
 <body>
@@ -154,34 +155,42 @@
   <section>
     <h2>💎 Signature Services</h2>
     <div class="grid">
-      <div class="course-box">
-        <h3>O Level / IGCSE English Elite Prep</h3>
-        <p>Past paper drills, examiner hacks, smart techniques for A* success.</p>
-      </div>
-      <div class="course-box">
-        <h3>Confident Spoken English</h3>
-        <p>Debates, accent work, daily convo mastery & confidence boosts.</p>
-      </div>
-      <div class="course-box">
-        <h3>Essay Writing Genius Program</h3>
-        <p>Master argument-building, structure, intros & killer conclusions.</p>
-      </div>
-      <div class="course-box">
-        <h3>Proofreading & Editing Help</h3>
-        <p>Assignments, essays, personal statements reviewed & polished.</p>
-      </div>
-      <div class="course-box">
-        <h3>Ascendia Bootcamp (All-In-One)</h3>
-        <p>1-month crash course in grammar, fluency, writing & critical reading.</p>
-      </div>
-      <div class="course-box">
-        <h3>Academic Writing for School Projects</h3>
-        <p>Support for research-based projects, analysis, and formatting.</p>
-      </div>
-      <div class="course-box">
-        <h3>Creative Writing Glow-Up</h3>
-        <p>Write short stories, blogs, and creative pieces that shine.</p>
-      </div>
+      <a href="english.html">
+        <div class="course-box">
+          <h3>O Level / IGCSE English Elite Prep</h3>
+          <p>Past paper drills, examiner hacks, A* strategy.</p>
+        </div>
+      </a>
+      <a href="spoken.html">
+        <div class="course-box">
+          <h3>Confident Spoken English</h3>
+          <p>Debates, accent work, convo confidence.</p>
+        </div>
+      </a>
+      <a href="essay.html">
+        <div class="course-box">
+          <h3>Essay Writing Genius</h3>
+          <p>Structure, arguments, intros & killer endings.</p>
+        </div>
+      </a>
+      <a href="proofreading.html">
+        <div class="course-box">
+          <h3>Proofreading & Editing Help</h3>
+          <p>Assignments, essays, and statements reviewed.</p>
+        </div>
+      </a>
+      <a href="bootcamp.html">
+        <div class="course-box">
+          <h3>Ascendia Bootcamp</h3>
+          <p>1-month grammar, writing, speaking course.</p>
+        </div>
+      </a>
+      <a href="academic.html">
+        <div class="course-box">
+          <h3>Academic Writing Support</h3>
+          <p>Project writing, research analysis, formatting.</p>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -189,7 +198,7 @@
 
   <section>
     <h2>🚀 Join Ascendia</h2>
-    <p>Fill the form and our team will WhatsApp you in 24 hours:</p>
+    <p>Fill the form and we’ll contact you within 24 hours:</p>
     <a href="https://forms.gle/YOUR_FORM_LINK" target="_blank">
       <button class="btn">Apply Now</button>
     </a>
@@ -198,16 +207,9 @@
   <div class="divider"></div>
 
   <section>
-    <h2>📢 Stay in the Loop</h2>
-    <p>Weekly updates & free tips on Instagram: <strong>@ascendia.academy</strong></p>
+    <h2>Stay in the Loop</h2>
+    <p>Follow our Instagram: <strong>@ascendia.academy</strong></p>
   </section>
 
-  <footer>
-    &copy; 2025 Ascendia Academy — Powered by dreams, built with fire.
-  </footer>
-
-  <script>
-    console.log("Ascendia Academy — Hot pink + hot blue mode activated!");
-  </script>
 </body>
 </html>
