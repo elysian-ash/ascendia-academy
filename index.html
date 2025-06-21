@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +25,6 @@
       background: linear-gradient(180deg, var(--hot-pink), var(--hot-blue));
       color: var(--white);
       padding: 20px;
-      position: relative;
       overflow-x: hidden;
     }
 
@@ -34,6 +32,7 @@
       text-align: center;
       padding: 60px 20px 20px;
       border-bottom: 4px dashed var(--white);
+      position: relative;
     }
 
     header h1 {
@@ -41,23 +40,11 @@
       font-size: 4rem;
       margin-bottom: 10px;
       color: var(--white);
-      transition: 0.3s ease;
-    }
-    header h1:hover {
-      text-shadow: 0 0 10px var(--white);
     }
 
     header p {
       font-size: 1.6rem;
-      margin-bottom: 5px;
-    }
-
-    #typewriter {
-      font-size: 1.3rem;
-      margin-top: 10px;
-      color: var(--white);
-      font-weight: 500;
-      min-height: 1.5em;
+      margin-bottom: 20px;
     }
 
     .about {
@@ -66,21 +53,12 @@
       font-size: 1.1rem;
       text-align: center;
       line-height: 1.8;
-      color: var(--white);
     }
 
     section {
       max-width: 1200px;
       margin: 60px auto;
       padding: 20px;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     h2 {
@@ -88,11 +66,6 @@
       font-size: 2.5rem;
       margin-bottom: 30px;
       text-align: center;
-      transition: 0.3s ease;
-    }
-
-    h2:hover {
-      text-shadow: 0 0 8px var(--white);
     }
 
     .btn {
@@ -111,6 +84,7 @@
 
     .btn:hover {
       transform: scale(1.05);
+      box-shadow: 0 0 15px var(--white);
     }
 
     .grid {
@@ -136,27 +110,15 @@
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
       min-height: 150px;
-      height: 100%;
     }
 
     .course-box:hover {
-      transform: scale(1.02);
-      box-shadow: 0 8px 28px rgba(255, 20, 147, 0.6);
-    }
-
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      25% { transform: translateX(-3px); }
-      50% { transform: translateX(3px); }
-      75% { transform: translateX(-3px); }
+      transform: scale(1.05);
+      box-shadow: 0 0 20px var(--white);
     }
 
     .course-box h3 {
-      color: var(--white);
       font-size: 1.4rem;
       margin-bottom: 2px;
     }
@@ -166,14 +128,6 @@
       margin-top: 0;
     }
 
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      margin-top: 60px;
-      border-top: 4px dashed var(--white);
-      padding-top: 20px;
-    }
-
     .divider {
       height: 6px;
       background: linear-gradient(90deg, var(--hot-pink), var(--hot-blue));
@@ -181,139 +135,122 @@
       border-radius: 10px;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.8rem;
-      }
-      h2 {
-        font-size: 1.8rem;
-      }
+    .section-title {
+      font-family: var(--font-head);
+      font-size: 2.8rem;
+      color: var(--white);
+      margin-bottom: 10px;
+      text-align: center;
     }
 
-    a {
+    #resources .about {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    .horizontal-cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .mini-card {
+      flex: 1 1 280px;
+      max-width: 320px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+      border-radius: 16px;
+      padding: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 4px 18px rgba(255, 20, 147, 0.3);
       text-decoration: none;
-      color: inherit;
+      color: var(--white);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .back-to-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: var(--white);
-      color: var(--hot-pink);
-      padding: 12px 16px;
-      border-radius: 50%;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(255, 20, 147, 0.4);
-      z-index: 1000;
-      transition: transform 0.3s ease;
-    }
-    .back-to-top:hover {
-      transform: scale(1.1);
+    .mini-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px var(--white);
     }
 
-  
-.floating-emojis {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 1;
-}
+    .floating-emoji {
+      position: absolute;
+      font-size: 1.5rem;
+      animation: float 6s infinite ease-in-out;
+      pointer-events: none;
+      opacity: 0.8;
+    }
 
-.floating-emojis span {
-  position: absolute;
-  font-size: 1.5rem;
-  animation: floatEmoji 12s linear infinite;
-  top: 100%;
-  left: calc(100% * var(--i));
-  opacity: 0.7;
-}
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      50% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0.6;
+      }
+      100% {
+        transform: translateY(0) rotate(720deg);
+        opacity: 1;
+      }
+    }
 
-.floating-emojis span:nth-child(1) { --i: 0.1; animation-delay: 0s; }
-.floating-emojis span:nth-child(2) { --i: 0.3; animation-delay: 2s; }
-.floating-emojis span:nth-child(3) { --i: 0.5; animation-delay: 4s; }
-.floating-emojis span:nth-child(4) { --i: 0.7; animation-delay: 6s; }
-.floating-emojis span:nth-child(5) { --i: 0.9; animation-delay: 8s; }
-
-@keyframes floatEmoji {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  100% {
-    transform: translateY(-120vh) rotate(360deg);
-  }
-}
-
-</style>
+  </style>
 </head>
 <body>
-
-<div class="floating-emojis">
-  <span>🌟</span>
-  <span>📝</span>
-  <span>📚</span>
-  <span>🚀</span>
-  <span>💡</span>
-</div>
-
   <header>
     <h1>Ascendia Academy</h1>
     <p>Fluent. Fierce. Fabulous.</p>
-    <span id="typewriter"></span>
     <div class="about">
       Ascendia is a high-performance English space for students who want more. It’s about clarity, confidence and clean execution whether you're prepping for O Level English, essays or your first debate. Built for thinkers. Designed by Ayesha.
     </div>
   </header>
 
-  <!-- your existing content goes here -->
+  <section>
+    <h2>Signature Services</h2>
+    <div class="grid">
+      <a href="english.html"><div class="course-box"><h3>O Level / IGCSE English Elite Prep</h3><p>Past paper drills, examiner hacks, A* strategy.</p></div></a>
+      <a href="spoken.html"><div class="course-box"><h3>Confident Spoken English</h3><p>Debates, accent work, convo confidence.</p></div></a>
+      <a href="essay.html"><div class="course-box"><h3>Essay Writing Pro-max</h3><p>Structure, arguments, intros & killer endings.</p></div></a>
+      <a href="bootcamp.html"><div class="course-box"><h3>Ascendia Bootcamp</h3><p>1-month grammar, writing, speaking course.</p></div></a>
+    </div>
+  </section>
 
-  <div class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</div>
+  <div class="divider"></div>
+
+  <section id="resources">
+    <h2 class="section-title">Free Resources</h2>
+    <div class="horizontal-cards">
+      <a href="YOUR_GOOGLE_DOC_LINK" class="mini-card" target="_blank"><h3>O Level / IGCSE Syllabus Guides</h3><p>Topic-wise outlines and updated checklists to structure your prep</p></a>
+      <a href="YOUR_GOOGLE_SHEET_LINK" class="mini-card" target="_blank"><h3>English Mastery Tracker</h3><p>A Google Sheet to track your grammar, vocab, and reading progress</p></a>
+      <a href="YOUR_NOTEBOOK_LINK" class="mini-card" target="_blank"><h3>The Notebook</h3><p>Ascendia's English learning journal and personal notebook to grow with you</p></a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>Ready to level up? Join Ascendia!</h2>
+    <p style="text-align: center;">Fill the form and we’ll contact you within 24 hours</p>
+    <a href="https://forms.gle/BB6rru1oP9tvaXBi7" target="_blank"><button class="btn">Become a member now~</button></a>
+    <div class="contact">Or reach us at: <strong>+92 33370009993</strong></div>
+  </section>
 
   <script>
-    const words = ["O Level Toppers", "Future Debaters", "Grammar Geeks", "Essay Writers"];
-    let i = 0, j = 0, current = "", isDeleting = false;
-
-    function typeEffect() {
-      const typewriter = document.getElementById("typewriter");
-      if (!typewriter) return;
-      if (i < words.length) {
-        if (!isDeleting && j <= words[i].length) {
-          current = words[i].slice(0, j++);
-        } else if (isDeleting && j >= 0) {
-          current = words[i].slice(0, j--);
-        }
-
-        typewriter.innerHTML = current;
-
-        if (!isDeleting && j === words[i].length) {
-          isDeleting = true;
-          setTimeout(typeEffect, 1000);
-          return;
-        } else if (isDeleting && j === 0) {
-          isDeleting = false;
-          i = (i + 1) % words.length;
-        }
-        setTimeout(typeEffect, 100);
-      }
+    const emojis = ['🌟', '🎓', '🔥', '💡', '📝', '📚', '✨'];
+    for (let i = 0; i < 30; i++) {
+      const emoji = document.createElement('div');
+      emoji.className = 'floating-emoji';
+      emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      emoji.style.left = `${Math.random() * 100}vw`;
+      emoji.style.top = `${Math.random() * 100}vh`;
+      emoji.style.animationDuration = `${4 + Math.random() * 6}s`;
+      document.body.appendChild(emoji);
     }
-    typeEffect();
-
-    // Scroll reveal animation
-    const sections = document.querySelectorAll("section");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    }, { threshold: 0.15 });
-
-    sections.forEach(sec => observer.observe(sec));
   </script>
 </body>
 </html>
