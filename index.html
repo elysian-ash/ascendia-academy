@@ -24,13 +24,12 @@
       font-family: var(--font-body);
       background: linear-gradient(180deg, var(--hot-pink), var(--hot-blue));
       color: var(--white);
-      line-height: 1.6;
       padding: 20px;
     }
 
     header {
       text-align: center;
-      padding: 60px 20px;
+      padding: 60px 20px 20px;
       border-bottom: 4px dashed var(--white);
     }
 
@@ -43,6 +42,16 @@
 
     header p {
       font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .about {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      text-align: center;
+      line-height: 1.8;
+      color: var(--white);
     }
 
     section {
@@ -78,8 +87,9 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
+      justify-content: center;
     }
 
     .course-box {
@@ -92,6 +102,11 @@
       text-align: center;
       transition: transform 0.3s ease;
       cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 240px;
+      height: 100%;
     }
 
     .course-box:hover {
@@ -107,7 +122,7 @@
 
     .course-box h3 {
       color: var(--white);
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       margin-bottom: 10px;
     }
 
@@ -144,16 +159,31 @@
       text-decoration: none;
       color: inherit;
     }
+
+    .contact {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    .credit {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Ascendia Academy</h1>
     <p>Fluent. Fierce. Fabulous.</p>
+    <div class="about">
+      Ascendia is a high-performance English space for students who want more. It’s about clarity, confidence and clean execution whether you're prepping for O Level English, essays or your first debate. Built for thinkers. Designed by Ayesha.
+    </div>
   </header>
 
   <section>
-    <h2>💎 Signature Services</h2>
+    <h2>Signature Services</h2>
     <div class="grid">
       <a href="english.html">
         <div class="course-box">
@@ -169,7 +199,7 @@
       </a>
       <a href="essay.html">
         <div class="course-box">
-          <h3>Essay Writing Genius</h3>
+          <h3>Essay Writing Pro-max</h3>
           <p>Structure, arguments, intros & killer endings.</p>
         </div>
       </a>
@@ -197,19 +227,23 @@
   <div class="divider"></div>
 
   <section>
-    <h2>🚀 Join Ascendia</h2>
-    <p>Fill the form and we’ll contact you within 24 hours:</p>
-    <a href="https://forms.gle/YOUR_FORM_LINK" target="_blank">
-      <button class="btn">Apply Now</button>
+    <h2>Ready to level up? Join Ascendia!</h2>
+    <p style="text-align: center;">Fill the form and we’ll contact you within 24 hours</p>
+    <a href="https://forms.gle/BB6rru1oP9tvaXBi7" target="_blank">
+      <button class="btn">Become a member now~</button>
     </a>
+    <div class="contact">
+      Or reach us at: <strong>+92 300 1234567</strong>
+    </div>
   </section>
 
   <div class="divider"></div>
 
   <section>
     <h2>Stay in the Loop</h2>
-    <p>Follow our Instagram: <strong>@ascendia.academy</strong></p>
+    <p style="text-align: center;">Follow our Instagram: <strong>@ascendia.academy</strong></p>
   </section>
+
 
 </body>
 </html>
