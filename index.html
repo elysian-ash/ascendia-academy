@@ -25,14 +25,12 @@
       background: linear-gradient(180deg, var(--hot-pink), var(--hot-blue));
       color: var(--white);
       padding: 20px;
-      overflow-x: hidden;
     }
 
     header {
       text-align: center;
       padding: 60px 20px 20px;
       border-bottom: 4px dashed var(--white);
-      position: relative;
     }
 
     header h1 {
@@ -53,6 +51,7 @@
       font-size: 1.1rem;
       text-align: center;
       line-height: 1.8;
+      color: var(--white);
     }
 
     section {
@@ -84,48 +83,67 @@
 
     .btn:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 15px var(--white);
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      justify-items: center;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-items: center;
+}
 
-    @media (max-width: 768px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
 
-    .course-box {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(20px);
-      border-radius: 20px;
-      padding: 20px;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 0 6px 25px rgba(255, 20, 147, 0.4);
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      min-height: 150px;
-    }
+.course-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 25px rgba(255, 20, 147, 0.4);
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 150px; /* Adjust as needed */
+  height: 100%;
+}
+
 
     .course-box:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px var(--white);
+      animation: shake 0.5s ease-in-out;
     }
 
-    .course-box h3 {
-      font-size: 1.4rem;
-      margin-bottom: 2px;
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-3px); }
+      50% { transform: translateX(3px); }
+      75% { transform: translateX(-3px); }
     }
 
-    .course-box p {
-      font-size: 1rem;
-      margin-top: 0;
+.course-box h3 {
+  color: var(--white);
+  font-size: 1.4rem;
+  margin-bottom: 2px; /* reduced margin */
+}
+
+  .course-box p {
+  font-size: 1rem;
+  margin-top: 0; /* ensure no default margin */
+}
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 60px;
+      border-top: 4px dashed var(--white);
+      padding-top: 20px;
     }
 
     .divider {
@@ -135,69 +153,85 @@
       border-radius: 10px;
     }
 
-    .section-title {
-      font-family: var(--font-head);
-      font-size: 2.8rem;
-      color: var(--white);
-      margin-bottom: 10px;
-      text-align: center;
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.8rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
     }
 
-    #resources .about {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto 40px;
-      text-align: center;
-    }
-
-    .horizontal-cards {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .mini-card {
-      flex: 1 1 280px;
-      max-width: 320px;
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(16px);
-      border-radius: 16px;
-      padding: 20px;
-      border: 2px solid rgba(255, 255, 255, 0.25);
-      box-shadow: 0 4px 18px rgba(255, 20, 147, 0.3);
+    a {
       text-decoration: none;
-      color: var(--white);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: inherit;
     }
 
-    .mini-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px var(--white);
+    .contact {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 10px;
     }
 
-    .floating-emoji {
-      position: absolute;
-      font-size: 1.5rem;
-      animation: float 6s infinite ease-in-out;
-      pointer-events: none;
+    .credit {
+      margin-top: 10px;
+      font-size: 0.95rem;
       opacity: 0.8;
     }
 
-    @keyframes float {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-      }
-      50% {
-        transform: translateY(-100px) rotate(360deg);
-        opacity: 0.6;
-      }
-      100% {
-        transform: translateY(0) rotate(720deg);
-        opacity: 1;
-      }
-    }
+.section-title {
+  font-family: var(--font-head);
+  font-size: 2.8rem;
+  color: var(--white);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#resources .about {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: var(--white);
+  text-align: center;
+}
+
+.horizontal-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mini-card {
+  flex: 1 1 280px;
+  max-width: 320px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  padding: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 18px rgba(255, 20, 147, 0.3);
+  text-decoration: none;
+  color: var(--white);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mini-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 22px rgba(255, 20, 147, 0.5);
+}
+
+.mini-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.mini-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
 
   </style>
 </head>
@@ -210,47 +244,84 @@
     </div>
   </header>
 
+  
+
   <section>
     <h2>Signature Services</h2>
     <div class="grid">
-      <a href="english.html"><div class="course-box"><h3>O Level / IGCSE English Elite Prep</h3><p>Past paper drills, examiner hacks, A* strategy.</p></div></a>
-      <a href="spoken.html"><div class="course-box"><h3>Confident Spoken English</h3><p>Debates, accent work, convo confidence.</p></div></a>
-      <a href="essay.html"><div class="course-box"><h3>Essay Writing Pro-max</h3><p>Structure, arguments, intros & killer endings.</p></div></a>
-      <a href="bootcamp.html"><div class="course-box"><h3>Ascendia Bootcamp</h3><p>1-month grammar, writing, speaking course.</p></div></a>
+      <a href="english.html">
+        <div class="course-box">
+          <h3>O Level / IGCSE English Elite Prep</h3>
+          <p>Past paper drills, examiner hacks, A* strategy.</p>
+        </div>
+      </a>
+      <a href="spoken.html">
+        <div class="course-box">
+          <h3>Confident Spoken English</h3>
+          <p>Debates, accent work, convo confidence.</p>
+        </div>
+      </a>
+      <a href="essay.html">
+        <div class="course-box">
+          <h3>Essay Writing Pro-max</h3>
+          <p>Structure, arguments, intros & killer endings.</p>
+        </div>
+      </a>
+     
+      <a href="bootcamp.html">
+        <div class="course-box">
+          <h3>Ascendia Bootcamp</h3>
+          <p>1-month grammar, writing, speaking course.</p>
+        </div>
+      </a>
+      
     </div>
   </section>
 
   <div class="divider"></div>
 
   <section id="resources">
-    <h2 class="section-title">Free Resources</h2>
-    <div class="horizontal-cards">
-      <a href="YOUR_GOOGLE_DOC_LINK" class="mini-card" target="_blank"><h3>O Level / IGCSE Syllabus Guides</h3><p>Topic-wise outlines and updated checklists to structure your prep</p></a>
-      <a href="YOUR_GOOGLE_SHEET_LINK" class="mini-card" target="_blank"><h3>English Mastery Tracker</h3><p>A Google Sheet to track your grammar, vocab, and reading progress</p></a>
-      <a href="YOUR_NOTEBOOK_LINK" class="mini-card" target="_blank"><h3>The Notebook</h3><p>Ascendia's English learning journal and personal notebook to grow with you</p></a>
-    </div>
-  </section>
+  <h2 class="section-title">Free Resources</h2>
 
-  <div class="divider"></div>
+
+  <div class="horizontal-cards">
+    <!-- Resource 1 -->
+    <a href="YOUR_GOOGLE_DOC_LINK" class="mini-card" target="_blank">
+      <div>
+        <h3>O Level / IGCSE Syllabus Guides</h3>
+        <p>Topic-wise outlines and updated checklists to structure your prep</p>
+      </div>
+    </a>
+
+    <!-- Resource 2 -->
+    <a href="YOUR_GOOGLE_SHEET_LINK" class="mini-card" target="_blank">
+      <div>
+        <h3>English Mastery Tracker</h3>
+        <p>A Google Sheet to track your grammar, vocab, and reading progress</p>
+      </div>
+    </a>
+
+    <!-- Resource 3 -->
+    <a href="YOUR_NOTEBOOK_LINK" class="mini-card" target="_blank">
+      <div>
+        <h3>The Notebook</h3>
+        <p>Ascendia's English learning journal and personal notebook to grow with you</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+   <div class="divider"></div>
 
   <section>
     <h2>Ready to level up? Join Ascendia!</h2>
     <p style="text-align: center;">Fill the form and we’ll contact you within 24 hours</p>
-    <a href="https://forms.gle/BB6rru1oP9tvaXBi7" target="_blank"><button class="btn">Become a member now~</button></a>
-    <div class="contact">Or reach us at: <strong>+92 33370009993</strong></div>
+    <a href="https://forms.gle/BB6rru1oP9tvaXBi7" target="_blank">
+      <button class="btn">Become a member now~</button>
+    </a>
+    <div class="contact">
+      Or reach us at: <strong>+92 33370009993</strong>
+    </div>
   </section>
-
-  <script>
-    const emojis = ['🌟', '🎓', '🔥', '💡', '📝', '📚', '✨'];
-    for (let i = 0; i < 30; i++) {
-      const emoji = document.createElement('div');
-      emoji.className = 'floating-emoji';
-      emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
-      emoji.style.left = `${Math.random() * 100}vw`;
-      emoji.style.top = `${Math.random() * 100}vh`;
-      emoji.style.animationDuration = `${4 + Math.random() * 6}s`;
-      document.body.appendChild(emoji);
-    }
-  </script>
 </body>
 </html>
